@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>DBDS Bidding</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>   
+  </welcome-file-list>
+ <servlet>
+        <servlet-name>deleteuser</servlet-name>
+        <servlet-class>main.java.com.BiddingJava.UserDelete</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>deleteuser</servlet-name>
+        <url-pattern>/deleteuser</url-pattern>
+    </servlet-mapping>
+ 
+  <servlet>
+        <servlet-name>deletebid</servlet-name>
+        <servlet-class>main.java.com.Bidding.BiddingDelete</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>deletebid</servlet-name>
+        <url-pattern>/deletebid</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>customerrep</servlet-name>
+        <servlet-class>main.java.com.BiddingJava.CustomerRep</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>customerrep</servlet-name>
+        <url-pattern>/customerrep</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>customerrep_add</servlet-name>
+        <servlet-class>main.java.com.BiddingJava.CustomerRepAdd</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>customerrep_add</servlet-name>
+        <url-pattern>/customerrep_add</url-pattern>
+    </servlet-mapping>
+ 
+ <servlet>
+        <servlet-name>deleteauctions</servlet-name>
+        <servlet-class>main.java.com.Product.ProductDelete</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>deleteauctions</servlet-name>
+        <url-pattern>/deleteauctions</url-pattern>
+    </servlet-mapping>
+    
+    
+  	<servlet>
+        <servlet-name>retrievesql</servlet-name>
+        <servlet-class>main.java.com.BiddingJava.RetrieveSql</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>retrievesql</servlet-name>
+        <url-pattern>/retrievesql</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>signup</servlet-name>
+        <servlet-class>main.java.com.BiddingJava.Signup</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>signup</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>productadded</servlet-name>
+        <servlet-class>main.java.com.Product.ProductAdd</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>productadded</servlet-name>
+        <url-pattern>/product/productadded</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>bidding</servlet-name>
+        <servlet-class>main.java.com.Bidding.BiddingAdd</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>bidding</servlet-name>
+        <url-pattern>/bidding/bidding</url-pattern>
+    </servlet-mapping> 
+    
+	 <servlet>
+        <servlet-name>setalert</servlet-name>
+        <servlet-class>main.java.com.Product.SetAlert</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>setalert</servlet-name>
+        <url-pattern>/portal/setalert</url-pattern>
+    </servlet-mapping> 
+    
+     <servlet>
+        <servlet-name>questionadd</servlet-name>
+        <servlet-class>main.java.com.Product.QuestionAsk</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>questionadd</servlet-name>
+        <url-pattern>/portal/questionadd</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>productquestion_answer</servlet-name>
+        <servlet-class>main.java.com.Product.AnswerAdd</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>productquestion_answer</servlet-name>
+        <url-pattern>/productquestion_answer</url-pattern>
+    </servlet-mapping> 
+   
+</web-app>

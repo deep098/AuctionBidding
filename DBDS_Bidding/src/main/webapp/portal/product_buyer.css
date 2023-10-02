@@ -1,0 +1,426 @@
+@charset "ISO-8859-1";
+@charset "ISO-8859-1";
+@import url(https://fonts.googleapis.com/css?family=MuseoModerno);
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s all;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "MuseoModerno";
+  display: flex;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+.textBox{
+	height: 20px;
+	width: 190px;
+	margin-left: 20px;
+  	padding-left: 20px;
+}
+.sidebar {
+  width: 250px;
+  background: #5443c3;
+  border-radius: 0 30px 30px 0;
+  padding: 30px;
+}
+
+#mobile-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: -8888;
+}
+
+#mobile-menu:checked + .sidebar {
+  transform: translate(280px);
+  z-index: 1;
+}
+
+#mobile-menu:checked + .sidebar + #mmenu {
+  transform: translate(50px);
+  color: #fff;
+}
+
+#mobile-menu:checked + .sidebar + #mmenu i:first-child {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  top: -50%;
+}
+
+#mobile-menu:checked + .sidebar + #mmenu i:last-child {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  top: unset;
+}
+
+#mmenu i:last-child {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+}
+
+#mmenu {
+  padding: 15px;
+  opacity: 0;
+  position: absolute;
+  font-size: 22px;
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.sidebar .logo i,
+.sidebar .logo h2 {
+  font-size: 24px;
+  padding: 4px;
+}
+
+.sidebar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.sidebar .menu ul li {
+  padding: 13px 15px;
+  padding-right: 30px;
+  letter-spacing: 0.05px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sidebar .menu ul li:first-child,
+.sidebar .menu ul li:hover:not(:last-child) {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.sidebar .menu ul li:last-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar .menu ul li i {
+  margin-right: 25px;
+}
+
+.content {
+  flex: 1;
+  padding: 35px 45px;
+  overflow-x: overlay;
+}
+
+.content .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .top .search {
+  position: relative;
+}
+
+.content .top .search input {
+  background: #ddd9f2;
+  padding: 10px 150px;
+  border-radius: 6px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.content .top .search i {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  color: #5443c3;
+  cursor: pointer;
+}
+
+.content .top .user i {
+  padding: 0 10px;
+  color: #5443c3;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.content .categories {
+  width: 100%;
+  display: flex;
+}
+
+.content #heading {
+  padding-top: 30px;
+  color: #5443c3;
+}
+
+.content .categories .category {
+  width: 33.3%;
+  color: #fff;
+  background: #5443c3;
+  margin-right: 15px;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.content .categories .category img {
+  padding: 5px 15px;
+  float: right;
+  padding-bottom: 0;
+  opacity: 0.6;
+}
+
+.content .all-products {
+  width: 100%;
+}
+
+.content .all-products .title {
+  padding: 15px 0;
+  color: #5443c3;
+}
+
+.content .products {
+  width: 100%;
+  display: flex;
+}
+
+.content .product {
+  width: 33.3%;
+  position: relative;
+  margin: 5px 5px;
+  padding: 15px;
+  background: #f6f5fb;
+  text-align: center;
+}
+.content .product:hover::visited {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+.content .product:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.content .product:hover .addbutton {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  left: 50%;
+}
+
+.addbutton {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.addbutton button {
+  padding: 5px 25px;
+  color: #fff;
+  border-radius: 5px;
+  background: #5453c3;
+}
+
+.content .product img {
+  padding: 10px;
+  width: 125px;
+  height: 130px;
+}
+
+.content .product i {
+  float: right;
+  color: #b5b4ba;
+}
+
+.content .product .subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .product .price h1 {
+  font-size: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-left: -295px;
+  }
+
+  .content {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .sidebar + #mmenu {
+    transform: translate(50px);
+  }
+
+  .content .top {
+    flex-direction: column;
+  }
+
+  .content .search {
+    padding-bottom: 25px;
+  }
+
+  #mmenu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    color: #000;
+    position: relative;
+  }
+
+  .content .products {
+    display: block;
+  }
+
+  .content .product {
+    width: 100%;
+  }
+
+  .content .top .search input {
+    padding: 10px 45px;
+  }
+
+  .content .top .search i {
+    top: 16%;
+  }
+
+  .content .categories {
+    display: block;
+  }
+
+  .content .categories .category {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .content .categories .category img {
+    display: none;
+  }
+
+  .user {
+    display: flex;
+  }
+}
+.float-container {
+
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    
+} 
+.fl{
+	float: left;
+  width: 110px;
+  line-height: 35px;
+}
+
+.fontLabel{
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.fr{
+	float: right;
+}
+
+.clr{
+	clear: both;
+}
+
+.box{
+	width: 360px;
+	height: 35px;
+	margin-top: 10px;
+	font-family: verdana;
+	font-size: 12px;
+}
+
+.textBox{
+	height: 35px;
+	width: 190px;
+	border: none;
+  padding-left: 20px;
+}
+
+.new{
+  float: left;
+}
+
+.iconBox{
+	height: 35px;
+	width: 40px;
+	line-height: 38px;
+	text-align: center;
+  background: #6b63eb;
+}
+.container{
+	background: #ffffff;
+	border-radius: 1.5em;
+	width: 350px;
+	height: 400px;
+	padding-bottom: 20px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+  padding: 70px 50px 20px 50px;
+}
+
+.submit {
+  border: 0;
+  height: 1.8rem;
+  padding: 0 calc(5.8rem * 0.5);
+  border-radius: calc(5.8rem * 0.3);
+  box-shadow: 0 0 2rem rgb(0, 0, 0, 20%);
+  cursor: pointer;
+  color:white;
+  background: rgb(7 2 18);
+}
